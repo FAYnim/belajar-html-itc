@@ -1,0 +1,309 @@
+/* === PENGATURAN GLOBAL === */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #121212;
+    color: #e0e0e0;
+}
+p {
+  font-size: 16px;
+}
+a {
+    text-decoration: none;
+    color: #32cd32; /* Lime Green */
+}
+h1 a {
+  color: #fff;
+}
+
+/* === UTILITIES === */
+.highlight-text {
+    color: #32cd32;
+}
+
+.section-title {
+  padding-left: 10px;
+  border-left: 3px solid #32cd32;
+  background: linear-gradient(to right, #1a2a1a, #121212);
+}
+
+
+/* === HEADER & NAVIGASI === */
+header {
+    background: #006400; /* Darker Green */
+    border: 1px solid #006400;
+    color: #fff;
+    padding: 5px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+header nav ul {
+    padding-inline-start: 0; 
+    margin-block-start: 0; 
+    margin-block-end: 0; 
+}
+
+header nav li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+header nav a {
+    color: #fff;
+}
+
+/* === BAGIAN UTAMA (MAIN) === */
+main section h2 {
+    color: #32cd32;
+}
+
+.normal-section {
+    padding: 10px 20px;
+}
+
+/* === BAGIAN BIO (#bio) === */
+#bio {
+    display: flex;
+}
+
+#bio .left-column {
+    width: 50%;
+    height: 80vh;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+}
+
+#bio .right-column {
+    width: 50%;
+    height: 80vh;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#hello-msg {
+    color: #e0e0e0;
+}
+
+#profile-photo {
+    width: 200px;
+    height: 200px;
+    border: 5px solid #32cd32;
+    border-radius: 15px;
+}
+
+/* === BAGIAN PROYEK (#project) === */
+#project .project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    height: 270px;
+}
+
+#project .project-box {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #444;
+    background-color: #1e1e1e;
+    width: 280px;
+    height: 125px;
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+#project .project-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 15px rgba(50, 205, 50, 0.5);
+}
+
+#project .project-box h3 {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+#project .project-box button {
+  width: 75px;
+  height: auto;
+  border-radius: 15px;
+  outline: none;
+  padding: 5px 10px;
+  background-color: inherit;
+  border: 1px solid #32cd32;
+  color: #32cd32;
+  cursor: pointer;
+}
+
+/* === BAGIAN KONTAK (#contact) === */
+#contact #form-contact {
+    border: 1px solid #444;
+    background-color: #1e1e1e;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+#contact label {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#contact input, 
+#contact textarea {
+  background-color: #2a2a2a;
+  color: #e0e0e0;
+  border: 1px solid #444;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+#contact input:focus, 
+#contact textarea:focus {
+  outline: 1px solid #32cd32;
+  border-color: #32cd32;
+}
+
+#contact textarea {
+    margin-bottom: 10px;
+}
+
+/* === FOOTER === */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #1e1e1e;
+}
+
+footer .social-links {
+    margin-bottom: 10px;
+}
+
+footer .social-links a {
+    margin: 0 15px;
+}
+
+footer p {
+    margin: 0;
+    color: #aaa;
+}
+
+/* === PENGATURAN MENU RESPONSIVE (HAMBURGER) === */
+.menu-toggle {
+    display: none; 
+}
+
+.menu-icon {
+    display: none; 
+    cursor: pointer;
+    font-size: 28px;
+    color: #fff;
+}
+
+
+/* === ATURAN RESPONSIVE UNTUK TAMPILAN MOBILE === */
+@media (max-width: 600px) {
+    /* -- Pengaturan Header & Navigasi Mobile -- */
+    .menu-icon {
+        display: block; 
+    }
+
+    header nav {
+        display: none; 
+        position: absolute;
+        top: 60px; 
+        left: 0;
+        width: 100%;
+        background-color: #006400; /* Darker Green */
+        z-index: 100; 
+    }
+
+    header nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    header nav li {
+        display: block;
+        text-align: center;
+        margin: 0;
+        padding: 15px 0;
+        border-bottom: 1px solid #005000;
+    }
+    
+    header nav li:last-child {
+        border-bottom: none;
+    }
+
+    .menu-toggle:checked + .menu-icon + nav {
+        display: block;
+    }
+
+    /* -- Penyesuaian Layout Utama -- */
+    main {
+        padding: 0 15px;
+    }
+
+    /* -- Bagian Bio -- */
+    #bio {
+        flex-direction: column; 
+        height: auto;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    #bio .left-column,
+    #bio .right-column {
+        width: 100%; 
+        height: auto;
+        padding: 10px;
+    }
+    
+    #hello-msg {
+        font-size: 1.6em; 
+        line-height: 1.4;
+    }
+
+    #profile-photo {
+        width: 200px;
+        height: 200px;
+        margin-top: 20px;
+    }
+
+    /* -- Bagian Proyek -- */
+    #project .project-container {
+        flex-direction: column; 
+        align-items: center;
+        height: auto;
+        gap: 20px; 
+    }
+
+    #project .project-box {
+        width: 100%; 
+        max-width: 320px; 
+        height: auto;
+        margin: 0;
+        padding: 10px;
+    }
+}
+
+#btn-more-about-me {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  background: inherit;
+  border: 2px solid #32cd32;
+  color: #32cd32;
+  padding: 10px;
+  text-align: center;
+}

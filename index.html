@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Faris AY - Portfolio</title> <!-- Judul lebih deskriptif -->
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/6ae1bb73d0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Bagian Header: Judul dan Navigasi -->
+    <header>
+        <h1>Faris AY</h1>
+
+        <!-- Tombol hamburger untuk tampilan mobile -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+
+        <nav>
+            <ul>
+                <!-- Tautan navigasi yang mengarah ke bagian halaman terkait -->
+                <li><a href="#about-me">About Me</a></li>
+                <li><a href="#project">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Bagian Bio: Perkenalan Diri -->
+        <section class="flex" id="bio">
+            <div class="left-column">
+                <h2 id="hello-msg">Hello...<br>I'm <span class="highlight-text">Faris</span> Adillah Y, a Professional <span class="highlight-text">Fullstack Developer</span></h2>
+            </div>
+            <div class="right-column">
+                <img id="profile-photo" src="profil.png" alt="Foto Profil Faris">
+            </div>
+        </section>
+
+        <!-- Bagian Tentang Saya -->
+        <section class="normal-section" id="about-me">
+            <h2 class="section-title">About Me</h2>
+            <p>Saya adalah seorang pelajar yang sedang mendalami dunia IT. Terutama pada pengembangan perangkat lunak alias web developer. Dari dulu saya sangat tertarik dengan teknoligi. Di mulai dari game Minecraft dimana aku mencoba membuat mini game dari kode command block.</p>
+            <button id="btn-more-about-me" onclick="move_aboutme()">
+              More About Me
+            </button>
+        </section>
+
+        <!-- Bagian Proyek -->
+        <section class="normal-section" id="project">
+            <h2 class="section-title">Projects</h2>
+            <div class="project-container">
+                <div class="project-box">
+                    <h3>Project 1</h3>
+                    <p>Alat automasi untuk UMKM</p>
+                    <button>Demo</button>
+                </div>
+                <div class="project-box">
+                    <h3>Project 2</h3>
+                    <p>Robot nasi goreng</p>
+                    <button>Demo</button>
+                </div>
+                <div class="project-box">
+                    <h3>Project 3</h3>
+                    <p>Web Iklan</p>
+                    <button>Demo</button>
+                </div>
+                <div class="project-box">
+                    <h3>Project 4</h3>
+                    <p>Web Anime</p>
+                    <button>Demo</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bagian Kontak -->
+        <section class="normal-section" id="contact">
+            <h2 class="section-title">Contact</h2>
+            <form id="form-contact" method="post">
+                <label for="inp-name">Name</label>
+                <input type="text" name="name" id="inp-name" placeholder="John Doe">
+                
+                <label for="inp-email">Email</label>
+                <input type="text" name="email" id="inp-email" placeholder="johndoe@gmail.com">
+                
+                <!-- Label untuk textarea diperbaiki dari "Name" menjadi "Message" -->
+                <label for="inp-message">Message</label>
+                <textarea name="message" id="inp-message" cols="30" rows="10" placeholder="I want to collaborate with you..."></textarea>
+                
+                <input type="submit" name="kirim-kontak" id="kirim-kontak" value="Kirim" />
+            </form>
+        </section>
+    </main>
+
+    <!-- Bagian Footer: Tautan Sosial Media dan Hak Cipta -->
+    <footer>
+        <div class="social-links">
+            <a href="https://www.github.com/faynim" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://www.instagram.com/faris.a.y" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </div>
+        <p>&copy; 2025 Faris Adillah Y. All rights reserved.</p>
+    </footer>
+    
+    <script type="text/javascript" charset="utf-8">
+      function move_aboutme() {
+        window.location.href = "about-me.html";
+      }
+    </script>
+</body>
+</html>
