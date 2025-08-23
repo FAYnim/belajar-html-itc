@@ -71,11 +71,11 @@ main section h2 {
 /* === BAGIAN BIO (#bio) === */
 #bio {
     display: flex;
+    height: 100vh;
 }
 
 #bio .left-column {
     width: 50%;
-    height: 80vh;
     padding: 10px 20px;
     display: flex;
     align-items: center;
@@ -83,7 +83,6 @@ main section h2 {
 
 #bio .right-column {
     width: 50%;
-    height: 80vh;
     padding: 10px 20px;
     display: flex;
     align-items: center;
@@ -306,4 +305,16 @@ footer p {
   color: #32cd32;
   padding: 10px;
   text-align: center;
+}
+
+.bordered {
+  border: 2px solid #32cd32;
+  border-radius: 10px;
+  margin: 0 20px 10px;
+}
+
+@media (max-width: 600px) {
+  .bordered {
+    margin: 0 0 10px;
+  }
 }
