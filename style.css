@@ -1,6 +1,6 @@
 /* === PENGATURAN GLOBAL === */
 * {
-  box-sizing: border-box;
+  box-sizing: border-box
 }
 
 html {
@@ -13,22 +13,18 @@ body {
   background: #121212;
   color: #e0e0e0;
 }
-
 p {
   font-size: 16px;
 }
-
 a {
   text-decoration: none;
-  color: #32cd32;
+  color: #32cd32; /* Lime Green */
 }
-
 h1 a {
   color: #fff;
 }
-
-button {
-  cursor: pointer;
+button{
+    cursor: pointer;
 }
 
 /* === UTILITIES === */
@@ -44,31 +40,26 @@ button {
   color: #fff;
 }
 
-.normal-section {
-  padding: 10px 100px;
-}
-
-.bordered {
-  border: 2px solid #32cd32;
-  border-radius: 10px;
-  margin: 0 20px 10px;
+#welcome-msg {
+  font-size: 50px; color: #fff; padding-left: 100px;
 }
 
 /* === HEADER & NAVIGASI === */
 header {
-  background: #006400;
+  background: #006400; /* Darker Green */
+  border: 1px solid #006400;
   color: #fff;
   padding: 5px 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  position: relative;
 }
 
 header nav ul {
-  padding: 0;
-  margin: 0;
+  padding-inline-start: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 
 header nav li {
@@ -92,30 +83,32 @@ main section h2 {
   color: #32cd32;
 }
 
-.welcome-msg {
-  font-size: 50px;
-  color: #fff;
-  padding-left: 100px;
+.normal-section {
+  padding: 10px 100px;
 }
 
 /* === BAGIAN BIO (#bio) === */
 #bio {
   display: flex;
-  align-items: center;
   height: 80vh;
-  padding: 10px 100px;
+  /* border: 2px dotted lime; */
 }
 
 #bio .left-column {
   width: 50%;
-  padding-right: 50px;
+  padding: 10px 100px;
+  display: flex;
+  align-items: center;
+  /* border: 2px dotted lime; */
 }
 
 #bio .right-column {
   width: 50%;
+  padding: 10px 20px;
   display: flex;
   align-items: center;
   justify-content: center;
+  /* border: 2px dotted lime; */
 }
 
 #hello-msg {
@@ -130,67 +123,47 @@ main section h2 {
   border-radius: 15px;
 }
 
-/* === BAGIAN ABOUT ME (#about-me) === */
+/* === BAGIAN ABOUT ME === */
 #about-me {
-  display: flex;
-  gap: 20px;
+    display: flex;
+    padding: 0 100px;
 }
-
-#about-me .left-column,
 #about-me .right-column {
-  width: 50%;
+    width: 50%;
+}
+#about-me .left-column {
+    width: 50%;
+}
+.skill-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.skill-box {
+    border: 2px solid #1e1e1e;
+    background-color: #1e1e1e;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.skill-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 20px rgba(50, 205, 50, 0.5);
 }
 
-.skill-container {
+/* BAGIAN EDUKASI (#education) */
+.education-container {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
 }
-
-.skill-box {
-  background-color: #1e1e1e;
-  padding: 5px 10px;
-  border-radius: 5px;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.skill-box:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 5px 20px rgba(50, 205, 50, 0.5);
-}
-
-#btn-more-about-me {
-  width: 100%;
-  border-radius: 5px;
-  background: inherit;
-  border: 2px solid #32cd32;
-  color: #32cd32;
-  padding: 10px;
-  text-align: center;
-  transition: background-color 0.3s ease;
-  margin-top: 15px;
-}
-
-#btn-more-about-me:hover {
-  background-color: #0b700b;
-  color: #fff;
-}
-
-/* === BAGIAN EDUKASI (#education) === */
-.education-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
 .education-box {
-  width: calc(50% - 10px);
+  width: 49%;
   border: 2px solid #444;
   border-radius: 15px;
   background: #1e1e1e;
   padding: 10px 20px;
 }
-
 .education-title {
   display: flex;
   justify-content: space-between;
@@ -201,16 +174,20 @@ main section h2 {
 #project .project-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  justify-content: space-between;
+  align-content: space-between;
+  /* height: 270px; */
 }
 
 #project .project-box {
   display: flex;
   flex-direction: column;
+  border: 1px solid #444;
   background-color: #1e1e1e;
-  width: calc(33.333% - 14px);
+  width: 280px;
+  height: 125px;
   border-radius: 15px;
-  padding: 15px;
+  padding: 10px;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
@@ -220,32 +197,35 @@ main section h2 {
 }
 
 #project .project-box h3 {
-  margin: 0 0 10px 0;
+  margin-bottom: 0;
+  margin-top: 0;
 }
 
 #project .project-box button {
-  width: auto;
-  max-width: 100px;
+  width: 75px;
+  height: auto;
   border-radius: 15px;
   outline: none;
   padding: 5px 10px;
   background-color: inherit;
   border: 1px solid #32cd32;
   color: #32cd32;
+  cursor: pointer;
 }
 
 /* === BAGIAN KONTAK (#contact) === */
 #contact #form-contact {
+  border: 1px solid #444;
   background-color: #1e1e1e;
   display: flex;
   flex-direction: column;
   padding: 20px;
   border-radius: 15px;
-  border: 1px solid #444;
 }
 
 #contact label {
-  margin: 10px 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 #contact input,
@@ -261,6 +241,10 @@ main section h2 {
 #contact textarea:focus {
   outline: 1px solid #32cd32;
   border-color: #32cd32;
+}
+
+#contact textarea {
+  margin-bottom: 10px;
 }
 
 /* === FOOTER === */
@@ -294,45 +278,37 @@ footer p {
   cursor: pointer;
   font-size: 28px;
   color: #fff;
-  user-select: none;
 }
 
-/* === ATURAN RESPONSIVE UNTUK TAMPILAN MOBILE (max-width: 768px) === */
-@media (max-width: 768px) {
-  /* -- Penyesuaian Layout Umum -- */
-  .normal-section {
-    padding: 10px 20px;
-  }
-  .bordered {
-    margin: 0 0 10px;
-  }
-
-  .welcome-msg {
-    padding: 0;
-    font-size: 2.5em;
-    text-align: center;
-  }
-
+/* === ATURAN RESPONSIVE UNTUK TAMPILAN MOBILE === */
+@media (max-width: 600px) {
   /* -- Pengaturan Header & Navigasi Mobile -- */
-  header {
-    padding: 15px 20px;
-  }
   .menu-icon {
     display: block;
   }
+  .normal-section {
+    padding: 10px 0;
+  }
+  #welcome-msg {
+    padding-left: 0;
+    text-align: center;
+  }
+
   header nav {
     display: none;
     position: absolute;
-    top: 100%;
+    top: 60px;
     left: 0;
     width: 100%;
-    background-color: #006400;
+    background-color: #006400; /* Darker Green */
     z-index: 100;
   }
+
   header nav ul {
     flex-direction: column;
     width: 100%;
   }
+
   header nav li {
     display: block;
     text-align: center;
@@ -340,58 +316,105 @@ footer p {
     padding: 15px 0;
     border-bottom: 1px solid #005000;
   }
+
   header nav li:last-child {
     border-bottom: none;
   }
-  .menu-toggle:checked ~ nav {
+
+  .menu-toggle:checked + .menu-icon + nav {
     display: block;
+  }
+
+  /* -- Penyesuaian Layout Utama -- */
+  main {
+    padding: 0 15px;
   }
 
   /* -- Bagian Bio -- */
   #bio {
-    flex-direction: column-reverse;
+    flex-direction: column;
     height: auto;
     text-align: center;
-    padding: 20px;
+    padding: 20px 0;
   }
+
   #bio .left-column,
   #bio .right-column {
     width: 100%;
-    padding: 10px 0;
-  }
-  #hello-msg {
-    font-size: 2em;
-    line-height: 1.4;
-  }
-  #profile-photo {
-    width: 200px;
-    height: 200px;
-    margin-bottom: 20px;
+    height: auto;
+    padding: 10px;
   }
 
-  /* -- Bagian About Me -- */
   #about-me {
     flex-direction: column;
-    padding: 0 20px;
+    height: auto;
+    padding: 20px 0;
   }
+
   #about-me .left-column,
   #about-me .right-column {
     width: 100%;
+    height: auto;
+    padding: 10px;
   }
 
-  /* -- Bagian Edukasi -- */
-  .education-box {
-    width: 100%;
+  #hello-msg {
+    font-size: 1.6em;
+    line-height: 1.4;
+  }
+
+  #profile-photo {
+    width: 200px;
+    height: 200px;
+    margin-top: 20px;
   }
 
   /* -- Bagian Proyek -- */
   #project .project-container {
     flex-direction: column;
     align-items: center;
+    height: auto;
     gap: 20px;
+    width: 100%;
   }
+
   #project .project-box {
     width: 100%;
-    max-width: 350px;
+    /*max-width: 320px;*/
+    height: auto;
+    margin: 0;
+    padding: 10px;
+  }
+
+  .education-box {
+    width: 100%;
+  }
+}
+
+#btn-more-about-me {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  background: inherit;
+  border: 2px solid #32cd32;
+  color: #32cd32;
+  padding: 10px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+#btn-more-about-me:hover {
+    background-color: #0b700b;
+    color: #fff;
+}
+
+.bordered {
+  border: 2px solid #32cd32;
+  border-radius: 10px;
+  margin: 0 20px 10px;
+}
+
+@media (max-width: 600px) {
+  .bordered {
+    margin: 0 0 10px;
   }
 }

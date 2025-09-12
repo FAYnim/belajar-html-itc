@@ -1,79 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Faris AY - About Me</title> <!-- Judul lebih deskriptif -->
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/6ae1bb73d0.js" crossorigin="anonymous"></script>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Faris AY - About Me</title>
+    <!-- Judul lebih deskriptif -->
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/6ae1bb73d0.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
     <!-- Bagian Header: Judul dan Navigasi -->
     <header>
-        <h1><a href="index.html">Faris AY</a></h1>
+      <h1><a href="index.html">Faris AY</a></h1>
 
-        <!-- Tombol hamburger untuk tampilan mobile -->
-        <input type="checkbox" id="menu-toggle" class="menu-toggle">
-        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+      <!-- Tombol hamburger untuk tampilan mobile -->
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+      <label for="menu-toggle" class="menu-icon">&#9776;</label>
 
-        <nav>
-            <ul>
-                <!-- Tautan navigasi yang mengarah ke bagian halaman terkait -->
-                <li><a href="#about-me">About Me</a></li>
-                <li><a href="#project">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+      <nav>
+        <ul>
+          <!-- Tautan navigasi yang mengarah ke bagian halaman terkait -->
+          <li><a href="#about-me">About Me</a></li>
+          <li><a href="#project">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main>
-        <!-- Bagian Bio: Perkenalan Diri -->
-        <section class="flex" id="bio">
-            <div class="left-column">
-                <h2 id="hello-msg">Hello...<br>I'm <span class="highlight-text">Faris</span> Adillah Y, a Professional <span class="highlight-text">Fullstack Developer</span></h2>
-            </div>
-            <div class="right-column">
-                <img id="profile-photo" src="profil.png" alt="Foto Profil Faris">
-            </div>
-        </section>
+      <!-- Bagian Bio: Perkenalan Diri -->
+      <section class="flex" id="bio">
+        <div class="left-column">
+          <h2 id="hello-msg">
+            Hello...<br />I'm <span class="highlight-text">Faris</span> Adillah
+            Y, a Professional
+            <span class="highlight-text">Fullstack Developer</span>
+          </h2>
+        </div>
+        <div class="right-column">
+          <img id="profile-photo" src="profil.png" alt="Foto Profil Faris" />
+        </div>
+      </section>
 
-        <!-- Bagian Tentang Saya -->
-        <section class="normal-section bordered" id="about-me">
-            <h2 class="section-title">About Me</h2>
-            <p>Saya adalah seorang pelajar yang sedang mendalami dunia IT. Terutama pada pengembangan perangkat lunak alias web developer. Dari dulu saya sangat tertarik dengan teknoligi. Di mulai dari game Minecraft dimana aku mencoba membuat mini game dari kode command block.</p>
-        </section>
+      <!-- Bagian Tentang Saya -->
+      <section class="normal-section bordered" id="about-me">
+        <h2 class="section-title">About Me</h2>
+        <p>
+          Saya adalah seorang pelajar yang sedang mendalami dunia IT. Terutama
+          pada pengembangan perangkat lunak alias web developer. Dari dulu saya
+          sangat tertarik dengan teknoligi. Di mulai dari game Minecraft dimana
+          aku mencoba membuat mini game dari kode command block.
+        </p>
+      </section>
 
-        <section class="normal-section bordered" id="">
-          <h2 class="section-title">Personal Details</h2>
-          <p><strong>Age: </strong>16</p>
-          <p><strong>Address: </strong>Surabaya, Indonesia</p>
-          <p><strong>Hobby: </strong>Playing Video Games</p>
-        </section>
-        
-        <section class="normal-section bordered" id="">
-          <h2 class="section-title">Education</h2>
-          <p>SMKN 1 Surabaya | 2025 - Now</p>
-          <p>SMPN 6 Surabaya | 2023 - 2025</p>
-          <p>SDM 18 Surabaya | 2017 - 2025</p>
-        </section>
+      <section class="normal-section bordered" id="">
+        <h2 class="section-title">Personal Details</h2>
+        <p><strong>Age: </strong>16</p>
+        <p><strong>Address: </strong>Surabaya, Indonesia</p>
+        <p><strong>Hobby: </strong>Playing Video Games</p>
+      </section>
 
-        <section class="normal-section bordered" id="">
-          <h2 class="section-title">Experience</h2>
-          <h3>Building & Experimenting with Tech Projects</h3>
-          <p>Mencoba membuat proyek digital, mulai dari chatbot WhatsApp, blog sederhana, landing page, hingga platform Tradingtool.</p>
-          <h3>Trading & Financial Exploration</h3>
-          <p>Aktif mempelajari trading, baik secara teknis (indikator, analisis tren) maupun manajemen risiko.</p>
-        </section>
+      <section class="normal-section bordered" id="education">
+        <h2 class="section-title">Education</h2>
+        <p>SMKN 1 Surabaya | 2025 - Now</p>
+        <p>SMPN 6 Surabaya | 2023 - 2025</p>
+        <p>SDM 18 Surabaya | 2017 - 2025</p>
+      </section>
+
+      <section class="normal-section bordered" id="">
+        <h2 class="section-title">Experience</h2>
+        <h3>Building & Experimenting with Tech Projects</h3>
+        <p>
+          Mencoba membuat proyek digital, mulai dari chatbot WhatsApp, blog
+          sederhana, landing page, hingga platform Tradingtool.
+        </p>
+        <h3>Financial Exploration</h3>
+        <p>
+          Aktif mempelajari trading, baik secara teknis (indikator, analisis
+          tren) maupun manajemen risiko.
+        </p>
+      </section>
     </main>
 
     <!-- Bagian Footer: Tautan Sosial Media dan Hak Cipta -->
     <footer>
-        <div class="social-links">
-            <a href="https://www.github.com/faynim" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="https://www.instagram.com/faris.a.y" target="_blank" rel="noopener noreferrer">Instagram</a>
-        </div>
-        <p>&copy; 2025 Faris Adillah Y. All rights reserved.</p>
+      <div class="social-links">
+        <a
+          href="https://www.github.com/faynim"
+          target="_blank"
+          rel="noopener noreferrer"
+          >GitHub</a
+        >
+        <a
+          href="https://www.instagram.com/faris.a.y"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Instagram</a
+        >
+      </div>
+      <p>&copy; 2025 Faris Adillah Y. All rights reserved.</p>
     </footer>
-</body>
+  </body>
 </html>
