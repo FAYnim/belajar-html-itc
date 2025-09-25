@@ -21,8 +21,8 @@
         <ul>
           <!-- Tautan navigasi yang mengarah ke bagian halaman terkait -->
           <li><a href="#">Home</a></li>
-          <li><a href="#about-me">About Me</a></li>
-          <li><a href="#about-me">Skills</a></li>
+          <li><a href="#welcome-msg">About Me</a></li>
+          <li><a href="#welcome-msg">Skills</a></li>
           <li><a href="#project">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -42,6 +42,10 @@
         <div class="right-column">
           <img id="profile-photo" src="profil.png" alt="Foto Profil Faris" />
         </div>
+      </section>
+      <section class="normal-section" id="know-more">
+        <button class="btn-know-more"><a href="resume-faris.pdf" download="Resume-Faris-AY.pdf">Download CV</a></button>
+        <button class="btn-know-more"><a href="https://www.linkedin.com/in/faris-ay">Let's Connect</a></button>
       </section>
 
       <!-- <h2 style="font-size: 50px; color: #fff; padding-left: 100px"> -->
@@ -229,16 +233,25 @@
           >Instagram</a
         >
       </div>
-      <p>&copy; 2025 Faris Adillah Y. All rights reserved.</p>
+      <p>Made with &#x2764 by Faris</p>
+      <p>&copy; 2025. All rights reserved.</p>
     </footer>
 
     <script type="text/javascript" charset="utf-8">
-      function demo() {
-        window.location.href = "demo.html";
-      }
-      function move_aboutme() {
-        window.location.href = "about-me.html";
-      }
+      const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                  entry.target.classList.add('visible');
+              } else {
+                  // Optional: Remove 'visible' class if you want the animation to reset on scroll out
+                  entry.target.classList.remove('visible');
+              }
+          });
+      }, { threshold: 0.5 }); // Trigger when 50% of the element is visible
+
+      document.querySelectorAll('section').forEach(section => {
+          observer.observe(section);
+      });
     </script>
   </body>
 </html>

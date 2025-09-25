@@ -26,7 +26,17 @@ h1 a {
 button{
     cursor: pointer;
 }
-
+section {
+  min-height: 400px;
+  padding-top: 50px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 /* === UTILITIES === */
 .highlight-text {
   color: #32cd32;
@@ -41,19 +51,24 @@ button{
 }
 
 #welcome-msg {
-  font-size: 50px; color: #fff; padding-left: 100px;
+  font-size: 50px; color: #fff; padding-left: 100px; padding-top: 100px;
 }
 
 /* === HEADER & NAVIGASI === */
 header {
-  background: #006400; /* Darker Green */
-  border: 1px solid #006400;
+  /* background: #006400;
+  border: 1px solid #006400; */
   color: #fff;
   padding: 5px 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  position: sticky;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(5px);
+  z-index: 999;
 }
 
 header nav ul {
@@ -84,19 +99,20 @@ main section h2 {
 }
 
 .normal-section {
-  padding: 10px 100px;
+  padding: 75px 100px 50px;
 }
 
 /* === BAGIAN BIO (#bio) === */
 #bio {
   display: flex;
   height: 80vh;
+  padding-top: 0;
   /* border: 2px dotted lime; */
 }
 
 #bio .left-column {
   width: 50%;
-  padding: 10px 100px;
+  padding: 10px 0 10px 100px;
   display: flex;
   align-items: center;
   /* border: 2px dotted lime; */
@@ -127,6 +143,7 @@ main section h2 {
 #about-me {
     display: flex;
     padding: 0 100px;
+    
 }
 #about-me .right-column {
     width: 50%;
@@ -317,6 +334,7 @@ footer p {
   #welcome-msg {
     padding-left: 0;
     text-align: center;
+    padding-top: 100px;
   }
 
   header nav {
@@ -442,4 +460,31 @@ footer p {
   .bordered {
     margin: 0 0 10px;
   }
+}
+
+#know-more {
+  height: auto;
+  min-height: auto;
+  padding: 0 100px 10px;
+  transform: translateY(-50px);
+}
+.btn-know-more {
+  border: none;
+  padding: 14px 18px; 
+  background-color: #0b700b;
+  border: 2px solid #0b700b;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 10px;
+  border-radius: 50px;
+  transition: background-color 0.3s;
+}
+.btn-know-more:hover {
+  background-color: inherit;
+  color: #32cd32;
+  box-shadow: 2px 2px 5px #00ffff, -2px -2px 5px #32cd32;
+}
+.btn-know-more a {
+  color: inherit;
 }
