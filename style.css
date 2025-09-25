@@ -36,11 +36,6 @@ section.visible {
   transform: translateY(0);
 }
 
-/* Khusus untuk bio dan know-more, hanya efek fade-in tanpa slide-up */
-#bio, #know-more {
-  /* transform: translateY(0); */
-}
-
 /* === UTILITIES === */
 .highlight-text {
   color: #32cd32;
