@@ -101,7 +101,7 @@ header #logo {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  box-shadow: -2px -2px 10px 2px #32cd32, 2px 2px 10px 4px #00ffff;
+  /* box-shadow: -2px -2px 10px 2px #32cd32, 2px 2px 10px 4px #00ffff; */
   animation: logo-spin 3s linear infinite;
 }
 
@@ -157,8 +157,10 @@ section {
 #profile-photo {
   width: 300px;
   height: 300px;
-  border: 5px solid #32cd32;
+  border: 3px solid #32cd32;
   border-radius: 15px;
+  /* box-shadow: -2px -2px 15px 2px #32cd32, 2px 2px 15px 4px #00ffff; */
+  animation: logo-spin 5s linear infinite;
 }
 
 /* --- BAGIAN TOMBOL "KNOW MORE" --- */
