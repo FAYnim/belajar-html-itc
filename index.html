@@ -231,30 +231,7 @@
       <p>&copy; 2025. All rights reserved.</p>
     </footer>
 
-    <script type="text/javascript" charset="utf-8">
-      const observer = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-              if (entry.isIntersecting) {
-                  entry.target.classList.add('visible');
-              } else {
-                  // Optional: Remove 'visible' class if you want the animation to reset on scroll out
-                  // entry.target.classList.remove('visible');
-              }
-          });
-      }, { threshold: 0.5 }); // Trigger when 50% of the element is visible
-
-      document.querySelectorAll('section').forEach(section => {
-          observer.observe(section);
-      });
-
-      const terhubung = () => {
-          window.open("https://www.linkedin.com/in/faris-ay", "_blank");
-      }
-      if (window.innerWidth <= 768) {
-        // Custom JavaScript for mobile view
-        const nav_skill = document.getElementById('nav-skills');
-        nav_skill.setAttribute('href', '#skills');
-      }
-    </script>
+    <!-- Menautkan file JavaScript eksternal -->
+    <script src="script.js" defer></script>
   </body>
 </html>
