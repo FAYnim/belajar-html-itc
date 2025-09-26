@@ -7,7 +7,7 @@
     <title>Faris AY - Portofolio</title>
     <!-- Judul lebih deskriptif -->
     <link rel="stylesheet" href="style.css" />
-    <link rel="shortcut icon" href="FAY_Motion.png" type="image/x-icon">k
+    <link rel="shortcut icon" href="FAY_Motion.png" type="image/x-icon">
   </head>
   <body>
     <!-- Bagian Header: Judul dan Navigasi -->
@@ -48,7 +48,7 @@
       </section>
       <section class="normal-section" id="know-more">
         <button class="btn-know-more"><a href="resume-faris.pdf" download="Resume-Faris-AY.pdf">Unduh CV</a></button>
-        <button class="btn-know-more"><a href="https://www.linkedin.com/in/faris-ay" target="_blank" rel="noopener noreferrer">Mari Terhubung</a></button>
+        <button class="btn-know-more" onclick="terhubung()"><a href="https://www.linkedin.com/in/faris-ay" target="_blank" rel="noopener noreferrer">Mari Terhubung</a></button>
       </section>
 
       <h2 id="welcome-msg">
@@ -56,7 +56,7 @@
       </h2>
       <section class="flex" id="about-me">
         <div class="left-column">
-          <h2 class="section-title">About Me</h2>
+          <h2 class="section-title">Tentang Saya</h2>
           <p>
             Saya adalah seorang pelajar yang sedang mendalami dunia IT. Terutama
             pada pengembangan perangkat lunak alias web developer. Dari dulu
@@ -246,6 +246,10 @@
       document.querySelectorAll('section').forEach(section => {
           observer.observe(section);
       });
+
+      const terhubung = () => {
+          window.open("https://www.linkedin.com/in/faris-ay", "_blank");
+      }
     </script>
   </body>
 </html>
