@@ -24,10 +24,10 @@
         <ul>
           <!-- Tautan navigasi yang mengarah ke bagian halaman terkait -->
           <li><a href="#">Beranda</a></li>
-          <li><a href="#welcome-msg">Tentang Saya</a></li>
-          <li><a href="#welcome-msg">Keahlian</a></li>
-          <li><a href="#project">Proyek</a></li>
-          <li><a href="#contact">Kontak</a></li>
+          <li><a href="#welcome-msg" id="nav-about-me">Tentang Saya</a></li>
+          <li><a href="#welcome-msg" id="nav-skills">Keahlian</a></li>
+          <li><a href="#project" id="nav-project">Proyek</a></li>
+          <li><a href="#contact" id="nav-contact">Kontak</a></li>
         </ul>
       </nav>
     </header>
@@ -249,6 +249,11 @@
 
       const terhubung = () => {
           window.open("https://www.linkedin.com/in/faris-ay", "_blank");
+      }
+      if (window.innerWidth <= 768) {
+        // Custom JavaScript for mobile view
+        const nav_skill = document.getElementById('nav-skills');
+        nav_skill.setAttribute('href', '#skills');
       }
     </script>
   </body>
