@@ -385,6 +385,10 @@ footer p {
     padding-left: 0;
     text-align: center;
     padding-top: 100px;
+    font-size: 30px;
+  }
+  header {
+    padding: 5px 20px;
   }
   header nav {
     display: none;
@@ -408,6 +412,9 @@ footer p {
   }
   header nav li:last-child {
     border-bottom: none;
+  }
+  .section-title {
+    font-size: 25px;
   }
 
   .menu-toggle:checked + .menu-icon + nav {
@@ -450,6 +457,20 @@ footer p {
     width: 200px;
     height: 200px;
     margin-top: 20px;
+  }
+  /* -- Bagian Tombol Know More -- */
+  #know-more {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Memberi jarak antar tombol */
+    transform: translateY(-20px); /* Mengurangi efek geser ke atas untuk mobile */
+    padding-top: 20px;
+  }
+  .btn-know-more {
+    padding: 10px 20px;
+    border-radius: 15px;
   }
   /* -- Bagian Proyek -- */
   #project .project-container {
