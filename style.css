@@ -312,6 +312,26 @@ section {
   cursor: pointer;
 }
 
+/* === ELEMEN LATAR BELAKANG MELAYANG === */
+.background-shapes {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Pastikan berada di belakang semua konten */
+  overflow: hidden; /* Sembunyikan bagian shape yang keluar layar */
+}
+
+.shape {
+  position: absolute;
+  display: block;
+  list-style: none;
+  background: linear-gradient(45deg, rgba(50, 205, 50, 0.2), rgba(0, 255, 255, 0.2)); /* Gradasi hijau-biru transparan */
+  border-radius: 50%;
+  animation: float 25s linear infinite;
+}
+
 /* === BAGIAN KONTAK (#contact) === */
 #contact #form-contact {
   border: 1px solid #444;
@@ -358,6 +378,21 @@ footer .social-links a {
 footer p {
   margin: 0;
   color: #aaa;
+}
+
+/* --- KEYFRAME UNTUK ANIMASI MELAYANG --- */
+@keyframes float {
+  0% {
+    transform: translateY(100vh) scale(0) rotate(0deg);
+    border-radius: 50%; /* Mulai sebagai lingkaran */
+  }
+  50% {
+    border-radius: 5%; /* Berubah menjadi persegi (dengan sudut tumpul) */
+  }
+  100% {
+    transform: translateY(-10vh) scale(1) rotate(360deg);
+    border-radius: 50%; /* Kembali menjadi lingkaran */
+  }
 }
 
 /* --- MENU RESPONSIVE (HAMBURGER) --- */
@@ -491,5 +526,9 @@ footer p {
   }
   .bordered {
     margin: 0 0 10px;
+  }
+  /* Sembunyikan animasi di mobile untuk performa lebih baik */
+  .background-shapes {
+    display: none;
   }
 }

@@ -15,13 +15,21 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(section);
   });
 
-  // --- Logika untuk mengubah link navigasi di tampilan mobile ---
-  if (window.innerWidth <= 768) {
-    const nav_skill = document.getElementById('nav-skills');
-    if (nav_skill) {
-      nav_skill.setAttribute('href', '#skills');
-    }
-  }
+  // --- Mengatur posisi, ukuran, dan durasi acak untuk bentuk latar belakang ---
+  const shapes = document.querySelectorAll('.background-shapes .shape');
+  shapes.forEach(shape => {
+    // Ukuran acak antara 20px dan 120px
+    const size = Math.random() * 100 + 20; 
+    // Posisi horizontal acak antara 0% dan 90% dari lebar layar
+    const leftPosition = Math.random() * 90; 
+    // Durasi animasi acak antara 20 dan 40 detik
+    const animationDuration = Math.random() * 20 + 20; 
+
+    shape.style.width = `${size}px`;
+    shape.style.height = `${size}px`;
+    shape.style.left = `${leftPosition}vw`;
+    shape.style.animationDuration = `${animationDuration}s`;
+  });
 });
 
 // --- Fungsi global untuk tombol "Mari Terhubung" ---
