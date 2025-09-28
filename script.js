@@ -30,6 +30,34 @@ document.addEventListener('DOMContentLoaded', () => {
     shape.style.left = `${leftPosition}vw`;
     shape.style.animationDuration = `${animationDuration}s`;
   });
+
+  // --- Logika Carousel Proyek ---
+  const track = document.querySelector('.project-track');
+  if (track) {
+    const slides = Array.from(track.children);
+    const nextButton = document.querySelector('.next-btn');
+    const prevButton = document.querySelector('.prev-btn');
+    const slideWidth = slides[0].getBoundingClientRect().width;
+
+    let currentIndex = 0;
+
+    const moveToSlide = (targetIndex) => {
+      track.style.transform = 'translateX(-' + slideWidth * targetIndex + 'px)';
+      currentIndex = targetIndex;
+    };
+
+    // Klik tombol Next
+    nextButton.addEventListener('click', e => {
+      const nextIndex = (currentIndex + 1) % slides.length;
+      moveToSlide(nextIndex);
+    });
+
+    // Klik tombol Prev
+    prevButton.addEventListener('click', e => {
+      const prevIndex = (currentIndex - 1 + slides.length) % slides.length;
+      moveToSlide(prevIndex);
+    });
+  }
 });
 
 // --- Fungsi global untuk tombol "Mari Terhubung" ---
