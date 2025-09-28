@@ -37,25 +37,52 @@ document.addEventListener('DOMContentLoaded', () => {
     const slides = Array.from(track.children);
     const nextButton = document.querySelector('.next-btn');
     const prevButton = document.querySelector('.prev-btn');
+    const dotsNav = document.querySelector('.carousel-nav-dots');
     const slideWidth = slides[0].getBoundingClientRect().width;
 
     let currentIndex = 0;
 
+    // Buat dots
+    slides.forEach((slide, index) => {
+      const dot = document.createElement('button');
+      dot.classList.add('dot');
+      if (index === 0) dot.classList.add('active');
+      dotsNav.appendChild(dot);
+    });
+
+    const dots = Array.from(dotsNav.children);
+
+    const updateDots = (currentDot, targetDot) => {
+      currentDot.classList.remove('active');
+      targetDot.classList.add('active');
+    };
+
     const moveToSlide = (targetIndex) => {
       track.style.transform = 'translateX(-' + slideWidth * targetIndex + 'px)';
+      const currentDot = dots[currentIndex];
+      const targetDot = dots[targetIndex];
+      updateDots(currentDot, targetDot);
       currentIndex = targetIndex;
     };
 
     // Klik tombol Next
-    nextButton.addEventListener('click', e => {
+    nextButton.addEventListener('click', () => {
       const nextIndex = (currentIndex + 1) % slides.length;
       moveToSlide(nextIndex);
     });
 
     // Klik tombol Prev
-    prevButton.addEventListener('click', e => {
+    prevButton.addEventListener('click', () => {
       const prevIndex = (currentIndex - 1 + slides.length) % slides.length;
       moveToSlide(prevIndex);
+    });
+
+    // Klik pada dots
+    dotsNav.addEventListener('click', e => {
+      const targetDot = e.target.closest('button.dot');
+      if (!targetDot) return;
+      const targetIndex = dots.findIndex(dot => dot === targetDot);
+      moveToSlide(targetIndex);
     });
   }
 });

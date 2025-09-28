@@ -331,6 +331,27 @@ section {
 .prev-btn { left: 10px; }
 .next-btn { right: 10px; }
 
+.carousel-nav-dots {
+  text-align: center;
+  padding: 10px 0;
+}
+
+.dot {
+  border: none;
+  background-color: #555;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  padding: 0;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #32cd32; /* Lime Green */
+}
+
 /* === ELEMEN LATAR BELAKANG MELAYANG === */
 .background-shapes {
   position: fixed;
