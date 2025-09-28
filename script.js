@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const shapes = document.querySelectorAll('.background-shapes .shape');
   shapes.forEach(shape => {
     // Ukuran acak antara 20px dan 120px
-    const size = Math.random() * 100 + 20; 
+    const size = Math.random() * 100 + 20;
     // Posisi horizontal acak antara 0% dan 90% dari lebar layar
     const leftPosition = Math.random() * 90; 
     // Durasi animasi acak antara 20 dan 40 detik
@@ -32,63 +32,68 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // --- Logika Carousel Proyek ---
-  const track = document.querySelector('.project-track');
-  if (track) {
-    const slides = Array.from(track.children);
+  const track = document.querySelector('.project-track'); // Ambil semua data proyek
+  if (track) { // Cek apakah elemen track ada
+    const slides = Array.from(track.children); // Buat array dari semua slide proyek.
     const nextButton = document.querySelector('.next-btn');
     const prevButton = document.querySelector('.prev-btn');
     const dotsNav = document.querySelector('.carousel-nav-dots');
-    const slideWidth = slides[0].getBoundingClientRect().width;
+    const slideWidth = slides[0].getBoundingClientRect().width; // Dapatkan lebar satu slide.
 
-    let currentIndex = 0;
+    let currentIndex = 0; // index slide yang aktif
 
-    // Buat dots
+    // Buat dots navigasi berdasarkan jumlah slide
     slides.forEach((slide, index) => {
-      const dot = document.createElement('button');
-      dot.classList.add('dot');
-      if (index === 0) dot.classList.add('active');
-      dotsNav.appendChild(dot);
+      const dot = document.createElement('button'); // Buat elemen dot
+      dot.classList.add('dot'); // Tambahkan class dot
+      if (index === 0) dot.classList.add('active'); // Jadikan dot pertama aktif
+      dotsNav.appendChild(dot); // Tambahkan dot ke dalam navigasi
     });
 
-    const dots = Array.from(dotsNav.children);
+    const dots = Array.from(dotsNav.children); // Buat array dari semua elemen dot. Sama kayak slides
 
+    // Fungsi untuk memperbarui dot yang aktif
     const updateDots = (currentDot, targetDot) => {
-      currentDot.classList.remove('active');
-      targetDot.classList.add('active');
+      currentDot.classList.remove('active'); // Hapus class active dari dot lama.
+      targetDot.classList.add('active'); // Tambahkan class active ke dot baru.
     };
 
+    // Fungsi untuk memindahkan slide
     const moveToSlide = (targetIndex) => {
-      track.style.transform = 'translateX(-' + slideWidth * targetIndex + 'px)';
-      const currentDot = dots[currentIndex];
-      const targetDot = dots[targetIndex];
-      updateDots(currentDot, targetDot);
-      currentIndex = targetIndex;
+      track.style.transform = 'translateX(-' + slideWidth * targetIndex + 'px)'; // Geser track ke posisi slide tujuan.
+      // Rumus untuk geser slide
+      // translateX(- lebarSlide * indexTujuan)
+
+      const currentDot = dots[currentIndex]; // Dot yang aktif
+      const targetDot = dots[targetIndex]; // Dot tujuan
+      updateDots(currentDot, targetDot); // Update status aktif pada dot.
+      currentIndex = targetIndex; // Update indeks slide yang aktif.
     };
 
-    // Klik tombol Next
+    // Tombol next
     nextButton.addEventListener('click', () => {
-      const nextIndex = (currentIndex + 1) % slides.length;
-      moveToSlide(nextIndex);
+      const nextIndex = (currentIndex + 1) % slides.length; // Hitung indeks slide berikutnya (looping).
+      // rumus (indeks sekarang + 1) mod jumlah slide
+      moveToSlide(nextIndex); // Pindahkan ke slide berikutnya.
     });
 
-    // Klik tombol Prev
+    // Tombol prev
     prevButton.addEventListener('click', () => {
-      const prevIndex = (currentIndex - 1 + slides.length) % slides.length;
-      moveToSlide(prevIndex);
+      const prevIndex = (currentIndex - 1 + slides.length) % slides.length; // Hitung indeks slide sebelumnya (looping).
+      // rumus (indeks sekarang - 1 + jumlah slide) mod jumlah slide
+      moveToSlide(prevIndex); // Pindahkan ke slide sebelumnya.
     });
 
-    // Klik pada dots
+    // Tombol navigasi lewat dot
     dotsNav.addEventListener('click', e => {
-      const targetDot = e.target.closest('button.dot');
-      if (!targetDot) return;
-      const targetIndex = dots.findIndex(dot => dot === targetDot);
+      const targetDot = e.target.closest('button.dot'); // Cari elemen dot yang diklik.
+      if (!targetDot) return; // Jika bukan dot yang diklik, abaikan.
+      const targetIndex = dots.findIndex(dot => dot === targetDot); // Cari indeks dari dot yang diklik
       moveToSlide(targetIndex);
     });
   }
 });
 
-// --- Fungsi global untuk tombol "Mari Terhubung" ---
-// Didefinisikan di luar DOMContentLoaded agar bisa diakses oleh atribut onclick
 const terhubung = () => {
   window.open('https://www.linkedin.com/in/faris-ay', '_blank');
 };
