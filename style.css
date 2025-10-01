@@ -192,7 +192,7 @@ section {
 }
 
 /* --- BAGIAN ABOUT ME & SKILLS (#about-me) --- */
-#about-me {
+/* #about-me {
     display: flex;
     padding: 0 100px;
     
@@ -202,12 +202,18 @@ section {
 }
 #about-me .left-column {
     width: 50%;
+} */
+.about-me-container {
+  display: flex;
+}
+.about-me-box {
+  width: 50%;
 }
 .skill-container {
   width: 100%;
   background-color: #121212;
-  border-right: 1px solid #444;
-  border-left: 1px solid #444;
+  border-right: 2px solid #444;
+  border-left: 2px solid #444;
   overflow: hidden; /* Sembunyikan item yang keluar dari kontainer */
   white-space: nowrap; /* Pastikan semua item dalam satu baris */
   position: relative; /* Diperlukan untuk elemen child */
@@ -223,7 +229,12 @@ section {
   display: inline-flex; /* Atur item skill agar berjajar ke samping */
   align-items: center;
   flex-direction: column;
-  padding: 15px; /* Beri jarak antar item skill */
+  padding: 15px 50px; /* Beri jarak antar item skill */
+  border: 2px solid #444;
+  box-shadow: 10px 10px #1e1e1e;
+  margin: 10px;
+  border-radius: 5px;
+  background: #1e1e1e
 }
 /* .skill-box {
   display: flex;
