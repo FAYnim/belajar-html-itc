@@ -130,6 +130,9 @@ section {
 .normal-section {
   padding: 75px 100px 50px;
 }
+.normal-section#about-me {
+  padding: 25px 100px 50px;
+}
 
 /* === BAGIAN BIO (#bio) === */
 #bio {
@@ -192,23 +195,52 @@ section {
 }
 
 /* --- BAGIAN ABOUT ME & SKILLS (#about-me) --- */
-/* #about-me {
-    display: flex;
-    padding: 0 100px;
-    
-}
-#about-me .right-column {
-    width: 50%;
-}
-#about-me .left-column {
-    width: 50%;
-} */
 .about-me-container {
   display: flex;
+  border: 1px solid #444;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background: #222;
 }
 .about-me-box {
   width: 50%;
 }
+.about-me-box:nth-child(2) {
+  /* border: 1px solid #fff; */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.about-me-box:nth-child(2) div {
+  width: 49%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #444;
+  background: #1e1e1e;
+  border-radius: 5px;
+  box-shadow: 2px 2px 0 #444;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.about-me-box:nth-child(2) div:hover {
+  box-shadow: 0 0 0 #444;
+  transform: translate(2px, 2px);
+}
+.about-me-title {
+  font-weight: bold;
+  margin-bottom: 2.5px;
+  font-size: 20px;
+}
+.about-me-text {
+  color: #32cd32;
+  font-size: 24px;
+}
+.about-me-number {
+  color: #32cd32;
+  font-size: 30px;
+}
+
 .skill-container {
   width: 100%;
   background-color: #121212;
@@ -236,26 +268,6 @@ section {
   border-radius: 5px;
   background: #1e1e1e
 }
-/* .skill-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-#btn-more-about-me {
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
-  background: inherit;
-  border: 2px solid #32cd32;
-  color: #32cd32;
-  padding: 10px;
-  text-align: center;
-  transition: background-color 0.3s ease;
-}
-#btn-more-about-me:hover {
-    background-color: #0b700b;
-    color: #fff;
-} */
 
 @keyframes scroll {
   from {
