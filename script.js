@@ -97,3 +97,9 @@ document.addEventListener('DOMContentLoaded', () => {
 const terhubung = () => {
   window.open('https://www.linkedin.com/in/faris-ay', '_blank');
 };
+
+const demo = () => {
+  const demo_list = ["ciluk baa", "hahaha", "wkwkwk", "aduh", "astaga", "yah", "yey", "sip", "mantap", "oke"];
+  const randomIndex = Math.floor(Math.random() * demo_list.length);
+  alert(demo_list[randomIndex]);
+}
