@@ -255,7 +255,7 @@ section {
 }
 .skill-track {
   display: inline-block; /* Membuat track menjadi elemen inline yang bisa dianimasikan */
-  animation: scroll 25s linear infinite; /* Terapkan animasi scroll */
+  animation: scroll 15s linear infinite; /* Terapkan animasi scroll */
 }
 .skill-box {
   display: inline-flex; /* Atur item skill agar berjajar ke samping */
@@ -372,7 +372,7 @@ section {
 }
 
 .dot.active {
-  background-color: #32cd32; /* Lime Green */
+  background-color: #32cd32;
 }
 
 /* === ELEMEN LATAR BELAKANG MELAYANG === */
@@ -382,15 +382,15 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; /* Pastikan berada di belakang semua konten */
-  overflow: hidden; /* Sembunyikan bagian shape yang keluar layar */
+  z-index: -1;
+  overflow: hidden;
 }
 
 .shape {
   position: absolute;
   display: block;
   list-style: none;
-  background: linear-gradient(45deg, rgba(50, 205, 50, 0.2), rgba(0, 255, 255, 0.2)); /* Gradasi hijau-biru transparan */
+  background: linear-gradient(45deg, rgba(50, 205, 50, 0.2), rgba(0, 255, 255, 0.2));
   border-radius: 50%;
   animation: float 25s linear infinite;
 }
@@ -443,18 +443,18 @@ footer p {
   color: #aaa;
 }
 
-/* --- KEYFRAME UNTUK ANIMASI MELAYANG --- */
+/* animasi latar belakang */
 @keyframes float {
   0% {
     transform: translateY(100vh) scale(0) rotate(0deg);
-    border-radius: 50%; /* Mulai sebagai lingkaran */
+    border-radius: 50%; /* Mulai lingkaran */
   }
   50% {
-    border-radius: 5%; /* Berubah menjadi persegi (dengan sudut tumpul) */
+    border-radius: 5%; /* Berubah jadi persegi */
   }
   100% {
     transform: translateY(-10vh) scale(1) rotate(360deg);
-    border-radius: 50%; /* Kembali menjadi lingkaran */
+    border-radius: 50%; /* Kembali jadi lingkaran */
   }
 }
 
