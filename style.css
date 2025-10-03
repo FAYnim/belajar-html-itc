@@ -85,10 +85,11 @@ header nav li {
 header nav a {
   color: #fff;
   font-weight: bold;
-  transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, border-bottom 0.1s ease-in-out;
 }
 header nav a:hover {
   color: #32cd32;
+  border-bottom: 2px solid #32cd32;
 }
 
 header .logo-container {
