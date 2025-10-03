@@ -7,7 +7,7 @@ html {
 }
 body {
   margin: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Poppins", sans-serif;
   background: #121212;
   color: #e0e0e0;
 }
@@ -204,6 +204,10 @@ section {
 }
 .about-me-box {
   width: 50%;
+}
+.about-me-box:nth-child(1) {
+  padding-right: 25px;
+  text-align: justify;
 }
 .about-me-box:nth-child(2) {
   /* border: 1px solid #fff; */
